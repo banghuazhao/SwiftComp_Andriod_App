@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SwiftComp</string>
+    <string name="fiber_volume_fraction_explain_explain">The fiber volume fraction is defined as the fiber volume divided by the total volume of the composite:\n\nfiber volume fraction = fiber volume / total volume of the composite\n\nThe fiber is the reinforcing phase in a composite. In fiber direction, it is stiff and strong and serves as the main load carrier. The matrix is the supporting phase in a composite, which protects the reinforcing phase and transfers the load to the reinforcing phases.</string>
+    <string name="stacking_sequence_explain">The stacking sequence is the layup angles from the bottom surface to the top surface.\n\nThe format of stacking sequence is [xx/xx/xx/xx/..]msn\nxx: Layup angle\nm: Number of repetition before symmetry\ns: Symmetry or not\nn: Number of repetition after symmetry\n\n• Examples:\nCross-ply laminates: [0/90]\nBalanced laminates: [45/-45]\n[0/90]2 : [0/90/0/90]\n[0/90]s : [0/90/90/0]\n[30/-30]2s : [30/-30/30/-30/-30/30/-30/30]\n[30/-30]s2 : [30/-30/-30/30/30/-30/-30/30]\n\nThe layer thickness is the thickness for each lamina. Note, it doesn\'t need layer thickness information for solid model.</string>
+    <string name="stacking_sequence_title">Stacking Sequence</string>
+    <string name="output_result_title">Output Result</string>
+    <string name="output_result_explain">• Solid Properties:\nThe structure is modeled as a solid. The results will give solid stiffness matrix and engineering constants, which can be used for solid (3D) element.</string>
+    <string name="type_of_output_title">Type of Output</string>
+    <string name="type_of_output_explain">• Elastic Properties:\nYou need to provide elastic properties to do the analysis. The elastic properties are Young\'s modulus, Shear modlulus, Poisson\'s ratio, or elastic constants (Cij).</string>
+    <string name="material_title">Material</string>
+    <string name="material_explain">• Isotropic Material:\nElastic: E, nu\nThermoelastic: ɑ\n\n• Transversely Material:\nElastic: E1, E2, G12, nu12, nu23\nThermoelastic: ɑ11, ɑ22\n\n• Orthotropic Material:\nElastic: E1, E2, E3, G12, G13, G23, nu12, nu13, nu23\nThermoelastic: ɑ11, ɑ22, ɑ33\n\n• Anisotropic Material:\nElastic: C11, C12, C13, C14, C15, C16, C22, C23, C24, C25, C26, C33, C34, C35, C36, C44, C45, C46, C55, C56, C66\nThermoelastic: ɑ11, ɑ22, ɑ33, ɑ23, ɑ13, ɑ12</string>
+    <string name="solid_properties_title">Solid Properties</string>
+    <string name="solid_properties_explain">• Effective Solid Stiffness Matrix:\nThe solid constitutive relations of the Cauchy continuum model for the linear elastic behavior using the generalized Hooke\'s law.\n\n• Engineering Constants:\nThey are extracted from effective solid stiffness matrix which is approximated as orthotropic material.</string>
+    <string name="plate_properties_title">Plate Properties</string>
+    <string name="plate_properties_explain">• Effective Plate Stiffness Matrix:\nThe plate constitutive relations of the Kirchhoff-Love model using the following six equations (A, B, D matrices)\n\n• In-Plane Properties:\nThe in-plane properties are computed with the help of A matrix.\n\n• Flexural Properties:\nThe flexural properties are computed with the help of D matrix.</string>
+
+</resources>

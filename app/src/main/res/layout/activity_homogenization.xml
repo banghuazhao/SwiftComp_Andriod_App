@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_homogenizaiton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="120dp"
+        android:clipToPadding="false"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <View
+        android:id="@+id/calculation_bar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/SCNavigation"
+        android:backgroundTint="@color/SCNavigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/homogenization_button"
+        android:layout_width="260dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/sc_homogenization_button_rounded_corner"
+        android:gravity="center"
+        android:text="Calculate"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/calculation_bar"
+        app:layout_constraintStart_toStartOf="@+id/calculation_bar"
+        app:layout_constraintTop_toTopOf="@+id/calculation_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

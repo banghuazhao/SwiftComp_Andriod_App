@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="SCModelHeader">20sp</dimen>
+    <dimen name="SCTitle">17sp</dimen>
+    <dimen name="SCParameterLabel">15sp</dimen>
+</resources>

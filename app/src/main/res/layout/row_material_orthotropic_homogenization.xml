@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sc_view_rounded_corner"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/view_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:capitalize="none"
+        android:text="TextView"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCTitle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <Button
+        android:id="@+id/explain_button"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/explain"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/engineering_constants_header"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:background="#DADADA"
+        android:text="Orthotropic Material"
+        android:textAlignment="center"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/view_title"
+        app:layout_constraintStart_toStartOf="@+id/view_title"
+        app:layout_constraintTop_toBottomOf="@+id/view_title" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <View
+        android:id="@+id/engineering_constants_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/sc_material_card_border"
+        app:layout_constraintBottom_toBottomOf="@id/nu23_text"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toTopOf="@+id/e1_text" />
+
+    <TextView
+        android:id="@+id/e1_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Young's Modulus E1"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toBottomOf="@+id/engineering_constants_header" />
+
+    <EditText
+        android:id="@+id/e1_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/e1_text" />
+
+    <TextView
+        android:id="@+id/e2_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Young's Modulus E2"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toBottomOf="@+id/e1_text" />
+
+    <EditText
+        android:id="@+id/e2_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/e2_text" />
+
+    <TextView
+        android:id="@+id/g12_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Shear Modulus G12"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toBottomOf="@+id/e3_text" />
+
+    <EditText
+        android:id="@+id/g12_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/g12_text" />
+
+    <TextView
+        android:id="@+id/g13_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Shear Modulus G13"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toBottomOf="@+id/g12_text" />
+
+    <EditText
+        android:id="@+id/g13_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/g13_text" />
+
+    <TextView
+        android:id="@+id/g23_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Shear Modulus G23"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toBottomOf="@+id/g13_text" />
+
+    <EditText
+        android:id="@+id/g23_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/g23_text" />
+
+    <TextView
+        android:id="@+id/nu12_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Poisson's Ratio nu12"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toBottomOf="@+id/g23_text" />
+
+    <EditText
+        android:id="@+id/nu12_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/nu12_text" />
+
+    <TextView
+        android:id="@+id/nu13_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Poisson's Ratio nu13"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toBottomOf="@+id/nu12_text" />
+
+    <EditText
+        android:id="@+id/nu13_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/nu13_text" />
+
+    <TextView
+        android:id="@+id/nu23_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Poisson's Ratio nu23"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toBottomOf="@+id/nu13_text" />
+
+    <EditText
+        android:id="@+id/nu23_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/nu23_text" />
+
+    <TextView
+        android:id="@+id/e3_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Young's Modulus E3"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/engineering_constants_header"
+        app:layout_constraintTop_toBottomOf="@+id/e2_text" />
+
+    <EditText
+        android:id="@+id/e3_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/engineering_constants_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/e3_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

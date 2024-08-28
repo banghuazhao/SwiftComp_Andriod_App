@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="SCNavigation">#33424e</color>
+    <color name="SCGreen">#81C547</color>
+    <color name="SCTitle">#333333</color>
+    <color name="SCSeparator">#E5E5E5</color>
+    <color name="SCBlue">#556B96</color>
+    <color name="SCBackground">#EFEFF4</color>
+    <color name="SCPlaceholder">#B3B3B3</color>
+    <color name="SCNumber">#878C97</color>
+    <color name="SCIcon">#666666</color>
+    <color name="SCTag">#F7F7F7</color>
+    <color name="SCMaterialCard">#fef8df</color>
+    <color name="SCMaterialCardBorder">#dfdcc2</color>
+
+</resources>

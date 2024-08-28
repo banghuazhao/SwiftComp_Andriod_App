@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="60dp"
+    android:clipToPadding="false">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sc_view_rounded_corner"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <Button
+        android:id="@+id/explain_button"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/explain"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/view_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:capitalize="none"
+        android:text="@string/plate_properties_title"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCTitle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+    <TextView
+        android:id="@+id/effective_plate_stiffness_header"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/SCGreen"
+        android:gravity="center"
+        android:text="Effective Plate Stiffness Matrix"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/SCTitle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_title"
+        app:layout_constraintStart_toStartOf="@+id/view_title"
+        app:layout_constraintTop_toBottomOf="@+id/view_title" />
+
+
+    <LinearLayout
+        android:id="@+id/effective_plate_stiffness_view"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:background="@drawable/sc_result_card_border"
+        android:orientation="vertical"
+        android:weightSum="6"
+        app:layout_constraintEnd_toEndOf="@+id/effective_plate_stiffness_header"
+        app:layout_constraintStart_toStartOf="@+id/effective_plate_stiffness_header"
+        app:layout_constraintTop_toBottomOf="@id/effective_plate_stiffness_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/effective_solid_c11"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c11"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c12"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c12"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c13"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c13"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c14"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c14"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c15"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c15"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c16"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c16"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/effective_solid_c21"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c21"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c22"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c22"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c23"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c23"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c24"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c24"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c25"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c25"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c26"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c26"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/effective_solid_c31"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c31"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c32"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c32"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c33"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c33"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c34"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c34"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c35"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c35"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c36"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c36"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/effective_solid_c41"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c41"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c42"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c42"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c43"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c43"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c44"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c44"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c45"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c45"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c46"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c46"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/effective_solid_c51"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c51"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c52"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c52"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c53"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c53"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c54"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c54"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c55"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c55"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c56"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/effective_solid_c61"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="c61"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c62"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c62"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c63"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c63"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c64"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c64"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c65"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c65"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/effective_solid_c66"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="c66"
+                android:textColor="@color/SCTitle"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/inplane_properties_header"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/SCGreen"
+        android:gravity="center"
+        android:text="In-plane Properties"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/SCTitle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_title"
+        app:layout_constraintStart_toStartOf="@+id/view_title"
+        app:layout_constraintTop_toBottomOf="@+id/effective_plate_stiffness_view" />
+
+    <View
+        android:id="@+id/inplane_properties_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/sc_result_card_border"
+        app:layout_constraintBottom_toBottomOf="@id/eta122_text"
+        app:layout_constraintEnd_toEndOf="@+id/inplane_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/inplane_properties_header"
+        app:layout_constraintTop_toTopOf="@+id/e1_text" />
+
+    <TextView
+        android:id="@+id/e1_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Young's Modulus E1"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/inplane_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/inplane_properties_header" />
+
+    <TextView
+        android:id="@+id/e1_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/inplane_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/e1_text" />
+
+    <TextView
+        android:id="@+id/e2_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Young's Modulus E2"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/inplane_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/e1_text" />
+
+    <TextView
+        android:id="@+id/e2_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/inplane_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/e2_text" />
+
+    <TextView
+        android:id="@+id/g12_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Shear Modulus G12"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/inplane_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/e2_text" />
+
+    <TextView
+        android:id="@+id/g12_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/inplane_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/g12_text" />
+
+    <TextView
+        android:id="@+id/nu12_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Poisson's Ratio nu12"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/inplane_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/g12_text" />
+
+    <TextView
+        android:id="@+id/nu12_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/inplane_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/nu12_text" />
+
+    <TextView
+        android:id="@+id/eta121_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Mutual Influence η12,1"
+        android:textColor="@color/SCTitle"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/inplane_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/nu12_text" />
+
+    <TextView
+        android:id="@+id/eta121_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/inplane_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/eta121_text" />
+
+    <TextView
+        android:id="@+id/eta122_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Mutual Influence η12,2"
+        android:textColor="@color/SCTitle"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/inplane_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/eta121_text" />
+
+    <TextView
+        android:id="@+id/eta122_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/inplane_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/eta122_text" />
+
+
+    <TextView
+        android:id="@+id/flexural_properties_header"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/SCGreen"
+        android:gravity="center"
+        android:text="Flexural Properties"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/SCTitle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_title"
+        app:layout_constraintStart_toStartOf="@+id/view_title"
+        app:layout_constraintTop_toBottomOf="@+id/inplane_properties_view" />
+
+    <View
+        android:id="@+id/flexural_properties_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/sc_result_card_border"
+        app:layout_constraintBottom_toBottomOf="@id/eta122_f_text"
+        app:layout_constraintEnd_toEndOf="@+id/flexural_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/flexural_properties_header"
+        app:layout_constraintTop_toTopOf="@+id/e1_f_text" />
+
+    <TextView
+        android:id="@+id/e1_f_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Young's Modulus E1"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/flexural_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/flexural_properties_header" />
+
+    <TextView
+        android:id="@+id/e1_f_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/flexural_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/e1_f_text" />
+
+    <TextView
+        android:id="@+id/e2_f_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Young's Modulus E2"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/flexural_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/e1_f_text" />
+
+    <TextView
+        android:id="@+id/e2_f_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/flexural_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/e2_f_text" />
+
+    <TextView
+        android:id="@+id/g12_f_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Shear Modulus G12"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/flexural_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/e2_f_text" />
+
+    <TextView
+        android:id="@+id/g12_f_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/flexural_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/g12_f_text" />
+
+    <TextView
+        android:id="@+id/nu12_f_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Poisson's Ratio nu12"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/flexural_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/g12_f_text" />
+
+    <TextView
+        android:id="@+id/nu12_f_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/flexural_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/nu12_f_text" />
+
+    <TextView
+        android:id="@+id/eta121_f_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Mutual Influence η12,1"
+        android:textColor="@color/SCTitle"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/flexural_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/nu12_f_text" />
+
+    <TextView
+        android:id="@+id/eta121_f_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/flexural_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/eta121_f_text" />
+
+    <TextView
+        android:id="@+id/eta122_f_text"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="Mutual Influence η12,2"
+        android:textColor="@color/SCTitle"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/flexural_properties_header"
+        app:layout_constraintTop_toBottomOf="@+id/eta121_f_text" />
+
+    <TextView
+        android:id="@+id/eta122_f_value"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="textEnd"
+        android:textColor="@color/SCTitle"
+        android:textSize="@dimen/SCParameterLabel"
+        app:layout_constraintEnd_toEndOf="@+id/flexural_properties_header"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/eta122_f_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
